@@ -1,0 +1,15 @@
+mkdir -p meu-projeto-ci/.github/workflows
+cd meu-projeto-ci
+git init
+git config user.name "Gustavo Palomo Moura"
+git config user.email "gustavopalomomou@gmail.com"
+touch README.md
+git add README.md
+git commit -m "commit inicial"
+git add .github/workflows/
+git commit -m "adiciona workflows de CI/CD"
+act -l
+act -n
+act -W .github/workflows/01-hello-local.yml 2>&1 | grep "|"
+act -W .github/workflows/02-pipeline-principal.yml -P ubuntu-latest=node:slim 2>&1 | grep "|"
+act -j scan-de-seguranca

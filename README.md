@@ -1,6 +1,7 @@
 # Laboratório Prático: GitHub Actions com act
 
-**Aluno:** Gustavo Palomo Moura
+**Nome:** Gustavo Palomo Moura
+**RA:** 2500355
 **Email:** gustavopalomomou@gmail.com
 
 ---
